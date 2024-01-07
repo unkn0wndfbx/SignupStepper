@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css?family=Poppins:400,500,600,700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    overflow: hidden;
+    background: -webkit-linear-gradient(bottom, #0250c5, #d43f8d);
+}
+
+::selection {
+    color: #fff;
+    background: #d43f8d;
+}
+
+.container {
+    width: 330px;
+    background: #fff;
+    text-align: center;
+    border-radius: 20px;
+    padding: 35px;
+}
+
+.container .form-outer {
+    width: 100%;
+    overflow: hidden;
+}
+
+.container .form-outer form {
+    display: flex;
+    width: 400%;
+}
+
+.form-outer form .page {
+    width: 25%;
+    transition: margin-left 0.3s ease-in-out;
+}
+
+.form-outer form .page .title {
+    text-align: left;
+    font-size: 25px;
+    line-height: 1;
+    font-weight: 500;
+}
+
+.form-outer form .page .field {
+    width: 330px;
+    height: 45px;
+    margin: 45px 0;
+    display: flex;
+    position: relative;
+}
+
+form .page .field input {
+    height: 100%;
+    width: 100%;
+    border: none;
+    outline: none;
+    padding-inline: 15px;
+    font-size: 18px;
+    font-weight: 500;
+}
+
+form .page .field select {
+    width: 100%;
+    padding-left: 10px;
+    font-size: 17px;
+    font-weight: 500;
+}
+
+form .page .field button {
+    width: 70%;
+    margin-inline: auto;
+    height: calc(100% + 5px);
+    border: none;
+    background: #d33f8d;
+    border-radius: 10px;
+    color: #fff;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 1px;
+    transition: 0.5s ease;
+}
+
+form .page .field button.disabled {
+    background: #858585;
+    pointer-events: none;
+}
+
+form .page .field button:hover {
+    background: #000;
+}
+
+form .page .btns button.prev {
+    margin-right: 3px;
+    font-size: 25px;
+    width: 60px;
+}
+
+form .page .btns button.next {
+    margin-left: 3px;
+}
+
+.container .progress-bar {
+    display: flex;
+    margin-bottom: 35px;
+    user-select: none;
+}
+
+.container .progress-bar .step {
+    text-align: center;
+    width: 100%;
+    position: relative;
+}
+
+.progress-bar .step hr {
+    display: inline-block;
+    transition: 0.2s;
+    line-height: 25px;
+    background: #909090;
+    border: none;
+    outline: none;
+    height: 8px;
+    width: 40px;
+    border-radius: 20px;
+}
+
+.progress-bar .step hr.active {
+    background: #d43f8d;
+}
